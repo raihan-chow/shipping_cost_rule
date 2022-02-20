@@ -1,0 +1,115 @@
+html, body{
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: normal;
+   /* font-size: 18px;
+   line-height: 28px; */
+   /* or 156% */
+   letter-spacing: 0.5px;
+   color: #000000;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+   font-family: 'Roboto';
+}
+
+
+a {
+   color: #000;
+}
+
+a:hover, a:active, a:focus {
+    outline: none;
+    text-decoration: none;
+    color: #F06625;
+}
+
+
+.content-wrapper {
+    background-color: #E0E0E0;
+}
+
+
+.t_align_c{
+    text-align: center;
+}
+
+.w_100{
+    width: 100%;
+}
+
+.js_close{
+    vertical-align: text-top;
+    font-size: 16px;
+    color: #f71a37;
+    cursor: pointer;
+}
+
+
+
+
+.box.box-primary {
+    border-top-color: green;
+}
+.btn-primary {
+    background-color: green;
+    border-color: green;
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary.hover {
+    background-color: #04A65A;
+}
+
+@media screen and (min-width: 700px) {
+    .main-header .sidebar-toggle {
+        /* display: none; */
+    }
+}
+@media screen and (max-width: 767px) {
+    .hidden-xs {
+        display: block!important;
+    }
+}
+@media  screen and (max-width: 767px) {
+    .skin-green .main-header .navbar .dropdown-menu li a {
+        color: green;
+    }
+}
+
+
+.pagination{
+    margin: 5px 0;
+}
+
+.pagination>li:first-child>a, .pagination>li:first-child>span{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.pagination>li:last-child>a, .pagination>li:last-child>span {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.datepicker.datepicker-dropdown{
+    z-index: 1060 !important;
+}
+
+.btn.btn-none{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    line-height: inherit;
+    font-size: inherit;
+    border-radius: 0;
+    -webkit-appearance: none;
+    font-weight: inherit;
+    background: none;
+    display: inline-block;
+}
+
+.flot-x-axis .flot-tick-label.tickLabel {
+    word-break: break-word;
+    padding: 0px 15px;
+    /* text-align: center; */
+    /* text-overflow: unset; */
+}

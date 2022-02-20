@@ -1,0 +1,79 @@
+.main-header{
+	background: #fd7e14;
+}
+
+.skin-blue .main-header .logo:hover {
+    background: rgba(0,0,0,0.1);
+}
+
+.skin-blue .main-header .logo:hover span{
+	color: #fff !important;
+}
+
+
+.login_logo_img{
+	max-width: 75px;
+	display: block;
+	margin: 0 auto 10px;
+	height: auto;
+}
+
+.login_title{
+	font-size: 29px;
+   color: #F36F21;
+}
+
+.login-box, .register-box {
+    width: 600px;
+    margin: 4% auto;
+}
+
+
+.login-box-body, .register-box-body {
+    background: #fff;
+    padding: 40px 30px;
+    border-top: 0;
+    color: #666;
+    border: 1px solid #F36F21;
+}
+
+
+.btn-danger {
+    background-color: #F36F21;
+    border-color: #F36F21;
+}
+
+
+.btn-danger:hover, .btn-danger:active, .btn-danger.hover {
+    background-color: #DB5E27;
+}
+
+
+.login-page, .register-page {
+    background: #fff;
+}
+
+
+.contact_admin{
+   margin-top: 40px;
+   margin-bottom: -10px;
+}
+
+.contact_admin .contact_admin_mail{
+   padding: 3px 15px;
+   border-radius: 0;
+}
+
+
+.modal-header {
+   color: #fff;
+   background-color: #F36F21!important;
+}
+
+.login-box-msg, .register-box-msg {
+    padding: 0 20px 40px 20px;
+}
+
+button.sign_in_btn {
+   margin-top: 10px;
+}

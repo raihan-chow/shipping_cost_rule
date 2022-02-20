@@ -1,14 +1,14 @@
 <!-- jQuery 3 -->
-<script src="{{asset('view_template/bower_components/jquery/dist/jquery.min.js')}}"></script>
+<script src="{{asset('asset/view_template/bower_components/jquery/dist/jquery.min.js')}}"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="{{asset('view_template/bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('asset/view_template/bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
 <!-- FastClick -->
-<script src="{{asset('view_template/bower_components/fastclick/lib/fastclick.js')}}"></script>
+<script src="{{asset('asset/view_template/bower_components/fastclick/lib/fastclick.js')}}"></script>
 
-<script src="{{asset('view_template/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js')}}"></script>
+<script src="{{asset('asset/view_template/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js')}}"></script>
 
 <!-- AdminLTE App -->
-<script src="{{asset('view_template/dist/js/adminlte.min.js')}}"></script>
+<script src="{{asset('asset/view_template/dist/js/adminlte.min.js')}}"></script>
 
 
 <script>

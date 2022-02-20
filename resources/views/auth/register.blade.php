@@ -4,12 +4,20 @@
     <p class="login-box-msg">Sign up
         @include('auth.flash_message')</p>
 
-    <form action="{{url('/signup')}}" method="post">
+    <form action="{{url('/register')}}" method="post">
         @csrf
-        <div class="form-group has-feedback @if($errors->has('login'))has-error @endif">
-            <input type="text" class="form-control" name="login" placeholder="Enter email or phone number(eg. 0xxxxxxxxxx)" value="{{old('login')}}">
+        
+
+        <div class="form-group has-feedback @if($errors->has('name'))has-error @endif">
+            <input type="text" class="form-control" name="name" placeholder="Enter Name" value="{{old('name')}}">
+            <span class="glyphicon glyphicon-user form-control-feedback"></span>
+            @if($errors->has('name'))<span class="help-block">{{$errors->first('name')}}</span>@endif
+        </div>
+
+        <div class="form-group has-feedback @if($errors->has('email'))has-error @endif">
+            <input type="text" class="form-control" name="email" placeholder="Enter email" value="{{old('email')}}">
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-            @if($errors->has('login'))<span class="help-block">{{$errors->first('login')}}</span>@endif
+            @if($errors->has('email'))<span class="help-block">{{$errors->first('email')}}</span>@endif
         </div>
         <div class="form-group has-feedback @if($errors->has('password'))has-error @endif">
             <input type="password" class="form-control" name="password" placeholder="Password" autocomplete="off">
