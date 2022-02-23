@@ -52,7 +52,7 @@
         <a href="{{url('/signin_with_google')}}" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google"></i> Sign in using
             Google</a>
     </div>
-    <a href="{{url('/signin')}}" class="text-center">I have an account</a>
+    <a href="{{url('/login')}}" class="text-center">I have an account</a>
 </div>
 <!-- /.login-box-body -->
 @endsection

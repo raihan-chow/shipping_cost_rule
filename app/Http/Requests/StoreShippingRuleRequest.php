@@ -24,7 +24,8 @@ class StoreShippingRuleRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'minimumWeight' => 'required|unique:posts|max:255',
+            'maximumWeight' => 'required|unique:posts|max:255',
         ];
     }
 }

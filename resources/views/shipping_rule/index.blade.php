@@ -34,23 +34,25 @@
       <table class="table table-bordered table_tbody_bg">
      <tr>
        <th>No</th>
-       <th style="min-width:200px;">Name</th>
-       <th>Expire date</th>
+       <th>Shipping Cost (TK)</th>
+       <th>Parcel Route</th>
+       <th>Delivery types</th>
        <th>Expire date</th>
        <th width="90px">Action</th>
      </tr>
      @foreach ($data as $key => $project)
       <tr>
         <td>{{ ++$i }}</td>
-        <td>{{ $project->project_name }}</td>
-        <td>{{ date('Y-m-d', strtotime($project->project_start_date)) }}</td>
-        <td>{{ date('Y-m-d', strtotime($project->project_closure_date)) }}</td>
+        <td>{{ $project->shipping_cost }}</td>
+        <td>{{ $project->parcel_route }}</td>
+        <td>{{ $project->delivery_types }}</td>
+        <td>{{ date('Y-m-d', strtotime($project->expire_date)) }}</td>
         
         <td>
-           <a class="btn btn-info btn-sm" href="{{ route('projects.request.show',$project->id) }}">View</a>
+           <a class="btn btn-info btn-sm m_right_10 m_bottom_5" href="{{ route('shipping-rule.show',$project->id) }}">View</a>
 
             {!! Form::open(['method' => 'DELETE','route' => ['shipping-rule.destroy', $project->id],'style'=>'display:inline']) !!}
-                {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
+                {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm', 'onclick' => "return confirm('Are you sure?')"]) !!}
             {!! Form::close() !!}
         </td>
       </tr>

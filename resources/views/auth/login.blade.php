@@ -37,7 +37,7 @@
     </div>
     <a href="{{url('/forgot_password')}}">I forgot my password</a>
     <br>
-    <a href="{{url('/signup')}}" class="text-center">Register a new account</a>
+    <a href="{{url('/register')}}" class="text-center">Register a new account</a>
 </div>
 <!-- /.login-box-body -->
 @endsection

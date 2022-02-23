@@ -153,7 +153,7 @@
         </div>
       </div>
 
-      <button type="submit" class="btn btn-success btn-lg pull-right" v-on:click.prevent="requestFormSubmit($event)">Save <i v-if="showSpinner" class="fa fa-circle-o-notch fa-spin fa-fw"></i></button>
+      <button type="submit" class="btn btn-success btn-lg pull-right" v-on:click.prevent="requestFormSubmit($event)">Update <i v-if="showSpinner" class="fa fa-circle-o-notch fa-spin fa-fw"></i></button>
 
     </div>
     <!-- /.box-body -->
@@ -220,6 +220,7 @@ const projectShow = Vue.createApp({
          enableIssueTracker: false,
          enableRiskRegister: false,
          form:{
+            shippingRuleId : "",
             minimumWeight: "",
             maximumWeight: "",
             deliveryTypes: "",
@@ -317,6 +318,8 @@ const projectShow = Vue.createApp({
          formData.append('shippingCost', self.form.shippingCost);
          formData.append('parcelRoute', self.form.parcelRoute);
          formData.append('expireDate', self.form.expireDate); 
+         formData.append('shippingRuleId', self.form.shippingRuleId); 
+         formData.append('_method', 'PUT');
             
          
          /*
@@ -326,7 +329,7 @@ const projectShow = Vue.createApp({
          e.preventDefault();
          $(e.currentTarget).attr('disabled', 'disabled');
          self.showSpinner = true;
-          axios.post( "{{ route('shipping-rule.store') }}",
+          axios.post( "{{ route('shipping-rule.update', $shippingRule->id) }}",
               formData,
               {
               headers: {
@@ -345,7 +348,7 @@ const projectShow = Vue.createApp({
 
               setTimeout(function(){
                   //window.location.reload();
-                  window.location.href = "{{ route('shipping-rule.index') }}";
+                  window.location.href = "{{ route('shipping-rule.update', $shippingRule->id) }}";
               }, 2000);
               //console.log(response.data);
             }
@@ -376,7 +379,17 @@ const projectShow = Vue.createApp({
       let self = this;
       console.log('mounted');
 
-      
+      let shippingRule = JSON.parse('{!! $shippingRule !!}');
+
+      self.form.expireDate = moment(shippingRule.expire_date).format('YYYY-MM-DD');
+      self.form.parcelRoute = shippingRule.parcel_route;
+      self.form.deliveryTypes = shippingRule.delivery_types;
+      self.form.shippingCost = shippingRule.shipping_cost;
+      self.form.minimumWeight = shippingRule.minimum_weight;
+      self.form.maximumWeight = shippingRule.maximum_weight;
+      self.form.shippingRuleId = shippingRule.id;
+
+      console.log(self.form);
 
       
 
