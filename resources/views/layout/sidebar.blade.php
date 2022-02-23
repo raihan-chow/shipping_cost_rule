@@ -32,6 +32,12 @@
             </a>
          </li>
 
+         <li class="active">
+            <a href="{{ route('shipping-rule.index') }}">
+               <i class="fa fa-dashboard"></i> <span>Create Shipping Role</span>
+            </a>
+         </li>
+
          
 
          

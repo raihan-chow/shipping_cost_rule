@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ShippingRuleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,6 +26,8 @@ Route::middleware(['auth:web'])->group(function () {
     // });
 
     Route::get('/home', [HomeController::class, 'welcomeIndex'])->name('home');
+
+    Route::resource('shipping-rule', ShippingRuleController::class);
 
 });
 

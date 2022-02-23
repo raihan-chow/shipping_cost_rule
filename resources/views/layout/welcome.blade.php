@@ -37,7 +37,7 @@
             </div>
             <!-- /.box-body -->
             <div class="box-footer">
-               Project, Process, Automation can be requested through this portal.
+               
             </div>
             <!-- /.box-footer-->
          </div>

@@ -80,7 +80,7 @@
         </li>
         <li>
          <div class="top_navbar_right_img">
-            <img class="user-image img-responsive" src="{{ asset("/asset/img/banglalink_logo.svg") }}" alt="User Image">
+            <img class="user-image img-responsive" src="{{ asset("asset/all_css/dist/img/user_avatar.png") }}" alt="User Image">
          </div>
         </li>
         <!-- Control Sidebar Toggle Button -->
