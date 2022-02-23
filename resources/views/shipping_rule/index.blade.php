@@ -38,7 +38,7 @@
        <th>Parcel Route</th>
        <th>Delivery types</th>
        <th>Expire date</th>
-       <th width="90px">Action</th>
+       <th width="150px">Action</th>
      </tr>
      @foreach ($data as $key => $project)
       <tr>
@@ -49,7 +49,7 @@
         <td>{{ date('Y-m-d', strtotime($project->expire_date)) }}</td>
         
         <td>
-           <a class="btn btn-info btn-sm m_right_10 m_bottom_5" href="{{ route('shipping-rule.show',$project->id) }}">View</a>
+           <a class="btn btn-info btn-sm m_right_10" href="{{ route('shipping-rule.show',$project->id) }}">View</a>
 
             {!! Form::open(['method' => 'DELETE','route' => ['shipping-rule.destroy', $project->id],'style'=>'display:inline']) !!}
                 {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm', 'onclick' => "return confirm('Are you sure?')"]) !!}

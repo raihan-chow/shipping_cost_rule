@@ -16,4 +16,7 @@ class ShippingRule extends Model
     ];
 
     protected $dates = ['expire_date'];
+
+
+    
 }

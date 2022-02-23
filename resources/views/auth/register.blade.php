@@ -45,13 +45,13 @@
         </div>
     </form>
 
-    <div class="social-auth-links text-center">
+    {{-- <div class="social-auth-links text-center">
         <p>- OR -</p>
         <a href="{{url('/signin_with_facebook')}}" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using
             Facebook</a>
         <a href="{{url('/signin_with_google')}}" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google"></i> Sign in using
             Google</a>
-    </div>
+    </div> --}}
     <a href="{{url('/login')}}" class="text-center">I have an account</a>
 </div>
 <!-- /.login-box-body -->
