@@ -1,0 +1,74 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Kodementor Api Documentation",
+        "description": "Kodementor Api Documentation",
+        "contact": {
+            "name": "Vijay Rana",
+            "email": "info@kodementor.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "https://shipping-rule.raihanchow.com/api",
+            "description": "Demo API Server"
+        }
+    ],
+    "paths": {
+        "/shipping-cost": {
+            "post": {
+                "tags": [
+                    "shipping-cost"
+                ],
+                "summary": "Store article in DB",
+                "description": "Store article in DB",
+                "operationId": "store",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "weight",
+                                    "delivery_route",
+                                    "delivery_type"
+                                ],
+                                "properties": {
+                                    "weight": {
+                                        "type": "integer",
+                                        "format": "numeric",
+                                        "example": "20"
+                                    },
+                                    "delivery_route": {
+                                        "type": "string",
+                                        "format": "string",
+                                        "example": "ISD"
+                                    },
+                                    "delivery_type": {
+                                        "type": "string",
+                                        "format": "string",
+                                        "example": "regular_service"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Display a listing of projects."
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}

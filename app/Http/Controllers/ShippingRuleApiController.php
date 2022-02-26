@@ -10,9 +10,47 @@ use Illuminate\Support\Facades\Validator;
 use Carbon\Carbon;
 use Exception;
 
+/**
+ * @OA\Info(
+ *     version="1.0.0",
+ *     title="Kodementor Api Documentation",
+ *     description="Kodementor Api Documentation",
+ *     @OA\Contact(
+ *         name="Vijay Rana",
+ *         email="info@kodementor.com"
+ *     ),
+ *     @OA\License(
+ *         name="Apache 2.0",
+ *         url="http://www.apache.org/licenses/LICENSE-2.0.html"
+ *     )
+ * ),
+ * @OA\Server(
+ *      url=L5_SWAGGER_CONST_HOST,
+ *      description="Demo API Server"
+ * ),
+ */
 class ShippingRuleApiController extends Controller
 {
     
+    /**
+     * @OA\Post(
+     *     path="/shipping-cost",
+     *      operationId="store",
+     *      tags={"shipping-cost"},
+     *      summary="Store article in DB",
+     *      description="Store article in DB",
+     *      @OA\RequestBody(
+     *         required=true,
+     *         @OA\JsonContent(
+     *            required={"weight", "delivery_route", "delivery_type"},
+     *            @OA\Property(property="weight", type="integer", format="numeric", example="20"),
+     *            @OA\Property(property="delivery_route", type="string", format="string", example="ISD"),
+     *            @OA\Property(property="delivery_type", type="string", format="string", example="regular_service"),
+     *         ),
+     *      ),
+     *     @OA\Response(response="200", description="Display a listing of projects.")
+     * )
+     */
     public function shippingCost(Request $request)
     {
         try {
